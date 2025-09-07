@@ -98,29 +98,46 @@
     <!-- Research & Projects Section -->
     <section id="research">
       <h2>Research &amp; Projects</h2>
+
       
       <div class="research-project">
-        <h3>Human Error Model &amp; NeuralMetric</h3>
-        <p>
-          Collaborating with Mcity at the University of Michigan, I investigated the impact of human errors on traffic safety. This research led to the development of NeuralMetric, a machine learning framework that significantly improves collision prediction accuracy and computational efficiency. The work is currently under review.
-        </p>
-        <p class="citation">
-          X. Yan, H. Sun, J. Ni, H. Zhu, S. Feng, and H. Liu, "NeuralMetric: An Accurate and Efficient Real-time Safety Metric for Automated Driving Systems" Under Review at the 25th International Symposium on Transportation and Traffic Theory.
-        </p>
+        <h3>InternManip: All-in-one Manipulation Learning Framework</h3>
+        <p><strong>Research Intern</strong> | OpenRobotLab, Shanghai Artificial Intelligence Lab — Shanghai, China<br/>05/2025–08/2025</p>
+        <ul>
+          <li>Developed a unified framework spanning manipulation policies (ACT, DP, Pi-0, GR00T-N1/1.5), robot morphologies (Franka, bimanual AgileX Piper arm), training datasets, and benchmarks (GenManip-v1, Calvin, Simpler-Env).</li>
+          <li>Integrated language-conditioned Diffusion Policy; standardized evaluation with GR00T-N1.5 and pi-0 VLA baselines.</li>
+          <li>Co-organized the IROS 2025 Challenge on Multimodal Robot Learning in InternUtopia and real world.</li>
+        </ul>
       </div>
       
       <div class="research-project">
-        <h3>TeraSim 1.0: Autonomous Vehicle Simulation Platform</h3>
-        <p>
-          I contributed to TeraSim 1.0, a unified simulation platform that integrates realistic traffic scenarios with advanced 3D visualization using CARLA and Unreal Engine 5. This platform serves as a comprehensive testbed for autonomous vehicle research.
-        </p>
+        <h3>Touch-Aware Multimodal Robotic Manipulation with Magnetic Tactile Sensors</h3>
+        <p><strong>Bachelor’s Thesis</strong> | UM-SJTU Joint Institute, Shanghai Jiao Tong University — Shanghai, China<br/>05/2025–08/2025</p>
+        <ul>
+          <li>Proposed a modular “6+1” touch-aware manipulation framework that decouples gripper intelligence from 6DoF arm planning, enabling high-frequency tactile feedback while maintaining efficient arm motion planning.</li>
+          <li>Designed a wearable visuo-tactile data collection device for intuitive fingertip demonstrations and fused it with on-robot teleoperation data to train a robust, scalable gripper control model.</li>
+          <li>Validated on a Realman arm–gripper platform controlled by a deep visuo-tactile model, safely handling fragile and deformable objects (e.g., paper clip, grapes, etc.) with adaptive gripping force.</li>
+        </ul>
+      </div>
+      
+      <div class="research-project">
+        <h3>NeuralMetric: Transformer-Based Safety Metric for Autonomous Driving</h3>
+        <p><strong>Mcity, University of Michigan</strong> — Ann Arbor, MI<br/>02/2024–12/2024</p>
+        <ul>
+          <li>Proposed NeuralMetric, a Transformer-based evaluation model that learns directly from historical trajectories to capture potential collision risk, addressing limitations of heuristic-driven and latency-prone safety metrics.</li>
+          <li>Constructed three large-scale simulation datasets with realistic accident distributions; mitigated extreme class imbalance via weighted losses and sampling strategies, significantly improving detection of rare but critical events.</li>
+          <li>Validated across highways, intersections, and roundabouts, achieving state-of-the-art predictive accuracy and real-time deployment (2 ms on GPU / 76 ms on CPU, 100–1000× faster than prior methods).</li>
+        </ul>
+        <p class="citation">Publications: [1] X. Yan, H. Sun, J. Ni, H. Zhu, S. Feng, and H. Liu, "NeuralMetric: An Accurate and Efficient Real-time Safety Metric for Automated Driving Systems" Under Review at the 26th International Symposium on Transportation and Traffic Theory.</p>
       </div>
       
       <div class="research-project">
         <h3>Ablation Study on Tri-Perspective View on Plane Configurations</h3>
-        <p>
-          I conducted a detailed study on 3D semantic occupancy prediction using the Panoptic nuScenes dataset, demonstrating that a two-plane configuration can outperform traditional methods in terms of accuracy.
-        </p>
+        <p><strong>Robotics, University of Michigan</strong> — Ann Arbor, MI<br/>10/2024–12/2024</p>
+        <ul>
+          <li>Conducted an ablation study on Tri-Perspective View (TPV) for 3D semantic occupancy prediction on Panoptic nuScenes datasets; achieved a 48% mIoU with two-plane setups versus 40% with traditional TPV.</li>
+          <li>Demonstrated that two-plane configurations are sufficient for effective vision-based occupancy prediction.</li>
+        </ul>
         <p class="citation">
           Resources: 
           <a href="https://github.com/tomakeIT/TPVFormer" target="_blank">GitHub Repository</a> | 

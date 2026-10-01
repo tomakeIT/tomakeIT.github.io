@@ -14,7 +14,6 @@
       --ink: #202724;
       --muted: #606864;
       --accent: #176b5d;
-      --accent-soft: #edf6f3;
       --line: #dfe4e1;
       --paper: #ffffff;
       --soft: #f7f8f7;
@@ -49,12 +48,12 @@
     nav a:hover { color: var(--accent); }
 
     main { padding-bottom: 70px; }
-    section { padding: 58px 0; border-bottom: 1px solid var(--line); }
-    section:last-child { border-bottom: 0; }
+    section { padding: 44px 0; }
     h2 { margin: 0 0 24px; font-size: 1.55rem; letter-spacing: -0.025em; }
     h3 { margin: 0; font-size: 1.08rem; line-height: 1.35; }
     p { margin: 0 0 16px; }
     .lead { max-width: 780px; color: var(--muted); font-size: 1.05rem; }
+    .affiliations { margin: 0; color: var(--muted); font-size: .92rem; }
     .quick-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
     .quick-links a {
       padding: 7px 13px;
@@ -67,19 +66,21 @@
     }
     .quick-links a:first-child { background: var(--accent); border-color: var(--accent); color: white; }
 
-    .project-list { display: grid; gap: 14px; }
-    .project {
-      padding: 22px 24px;
-      background: var(--soft);
-      border: 1px solid var(--line);
-      border-left: 3px solid var(--accent);
-      border-radius: 8px;
+    .entry-list { border-top: 1px solid var(--line); }
+    .entry {
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 22px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
     }
-    .project.featured { background: var(--accent-soft); }
-    .project-head { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; }
-    .project-type { color: var(--muted); font-size: .76rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
-    .project p { margin: 9px 0 0; color: var(--muted); }
-    .project-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; font-size: .84rem; font-weight: 650; }
+    .entry-year { color: var(--muted); font-size: .88rem; font-weight: 650; }
+    .entry h3 a { color: var(--ink); text-decoration: none; }
+    .entry h3 a:hover { color: var(--accent); text-decoration: underline; }
+    .entry-authors, .entry-description { margin: 7px 0 3px; color: var(--muted); font-size: .9rem; line-height: 1.55; }
+    .entry-authors strong { color: var(--ink); font-weight: 700; }
+    .entry-venue { margin: 0; color: var(--muted); font-size: .88rem; }
+    .entry-links { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 9px; font-size: .84rem; font-weight: 650; }
 
     .experience-list { border-top: 1px solid var(--line); }
     .experience {
@@ -107,9 +108,8 @@
       .topline { display: block; }
       .contact-line { margin-top: 20px; text-align: left; }
       nav .container { gap: 18px; }
-      section { padding: 44px 0; }
-      .project-head { display: block; }
-      .project-type { display: block; margin-top: 5px; }
+      section { padding: 34px 0; }
+      .entry { grid-template-columns: 1fr; gap: 3px; }
       .experience { grid-template-columns: 1fr; gap: 8px; }
       .education-grid { grid-template-columns: 1fr; }
     }
@@ -132,6 +132,7 @@
   <nav aria-label="Primary navigation">
     <div class="container">
       <a href="#about">About</a>
+      <a href="#publications">Publications</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
@@ -142,38 +143,74 @@
   <main class="container">
     <section id="about">
       <h2>About</h2>
-      <p class="lead">I am an M.S. Robotics student at the University of Michigan working on robot learning, world models, reinforcement learning, and scalable data systems for embodied intelligence. I am especially interested in closing the gap between learning algorithms and reliable deployment on real robots.</p>
+      <p class="lead">I am an M.S. Robotics student working on robot learning, world models, reinforcement learning, and scalable data systems for embodied intelligence. I am especially interested in closing the gap between learning algorithms and reliable deployment on real robots.</p>
+      <p class="affiliations">University of Michigan · Previously at XPENG Robotics, Lightwheel, and OpenRobotLab</p>
       <div class="quick-links">
+        <a href="#publications">Publications</a>
         <a href="#projects">Selected projects</a>
         <a href="resume.pdf" target="_blank" rel="noopener">Full resume</a>
         <a href="mailto:jialeng@umich.edu">Email me</a>
       </div>
     </section>
 
+    <section id="publications" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications</h2>
+      <div class="entry-list">
+        <article class="entry">
+          <span class="entry-year">2026</span>
+          <div>
+            <h3><a href="https://arxiv.org/abs/2609.39403" target="_blank" rel="noopener">IronMind: Scaling Humanoid Dexterous Manipulation via Camera-Space Ego-Centric Pretraining</a></h3>
+            <p class="entry-authors">Huimin Pan, Yufan Ren, Kunpeng Song, Siyang Wang, Xiwen Zhang, Xiaoyun Hu, Zhuoxu Duan, Hanrui Zheng, <strong>Jialeng Ni</strong>, Nathan Zhao, Sibo Ma, Zhenxuan Fan, Zhongyang Che, Danny Bao, Jiacheng Wei, Jerry Bai, Xiaoyu Yue, Xiaoyang Guo, Chenyi Chen</p>
+            <p class="entry-venue">arXiv preprint, September 2026</p>
+            <div class="entry-links"><a href="https://arxiv.org/abs/2609.39403" target="_blank" rel="noopener">arXiv ↗</a><a href="https://arxiv.org/pdf/2609.39403" target="_blank" rel="noopener">PDF ↗</a></div>
+          </div>
+        </article>
+        <article class="entry">
+          <span class="entry-year">2026</span>
+          <div>
+            <h3><a href="https://arxiv.org/abs/2609.33765" target="_blank" rel="noopener">Principal Steering Subspaces for Online Adaptation of Frozen Generative Robot Policies</a></h3>
+            <p class="entry-authors"><strong>Jialeng Ni</strong>, Nathan Zhao, Kunpeng Song</p>
+            <p class="entry-venue">arXiv preprint, September 2026</p>
+            <div class="entry-links"><a href="https://arxiv.org/abs/2609.33765" target="_blank" rel="noopener">arXiv ↗</a><a href="https://arxiv.org/pdf/2609.33765" target="_blank" rel="noopener">PDF ↗</a></div>
+          </div>
+        </article>
+        <article class="entry">
+          <span class="entry-year">2026</span>
+          <div>
+            <h3><a href="https://doi.org/10.1016/j.tra.2026.105019" target="_blank" rel="noopener">NeuralMetric: An accurate and efficient real-time safety metric for automated driving systems</a></h3>
+            <p class="entry-authors">Xintao Yan, Haowei Sun, <strong>Jialeng Ni</strong>, Haojie Zhu, Shuo Feng, Henry X. Liu</p>
+            <p class="entry-venue"><em>Transportation Research Part A: Policy and Practice</em>, vol. 210, article 105019, August 2026</p>
+            <div class="entry-links"><a href="https://doi.org/10.1016/j.tra.2026.105019" target="_blank" rel="noopener">DOI ↗</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="projects">
       <h2>Selected Projects</h2>
-      <div class="project-list">
-        <article class="project featured">
-          <div class="project-head"><h3>PiperPilot</h3><span class="project-type">Independent Open Source</span></div>
-          <p>An end-to-end, low-latency XR teleoperation and LeRobot-compatible data-collection toolkit for Piper robots, with Quest 3 and SpaceMouse control, replay, and policy deployment.</p>
-          <div class="project-links"><a href="https://github.com/tomakeIT/PiperPilot" target="_blank" rel="noopener">GitHub ↗</a><a href="https://jialengni.com/PiperPilot/" target="_blank" rel="noopener">Documentation ↗</a></div>
+      <div class="entry-list">
+        <article class="entry">
+          <span class="entry-year">2026</span>
+          <div>
+            <h3>PiperPilot</h3>
+            <p class="entry-description">An end-to-end, low-latency XR teleoperation and LeRobot-compatible data-collection toolkit for Piper robots, with Quest 3 and SpaceMouse control, replay, and policy deployment.</p>
+            <div class="entry-links"><a href="https://github.com/tomakeIT/PiperPilot" target="_blank" rel="noopener">GitHub ↗</a><a href="https://jialengni.com/PiperPilot/" target="_blank" rel="noopener">Documentation ↗</a></div>
+          </div>
         </article>
-        <article class="project">
-          <div class="project-head"><h3>InternManip</h3><span class="project-type">Robot Learning</span></div>
-          <p>A unified training and evaluation framework spanning ACT, Diffusion Policy, Pi0, and GR00T-N1/N1.5 across GenManip-v1, CALVIN, and SimplerEnv.</p>
-          <div class="project-links"><a href="https://github.com/InternRobotics/InternManip" target="_blank" rel="noopener">GitHub ↗</a><a href="https://internrobotics.shlab.org.cn/challenge/2025/" target="_blank" rel="noopener">IROS Challenge ↗</a></div>
+        <article class="entry">
+          <span class="entry-year">2025</span>
+          <div>
+            <h3>InternManip</h3>
+            <p class="entry-description">A unified training and evaluation framework spanning ACT, Diffusion Policy, Pi0, and GR00T-N1/N1.5 across GenManip-v1, CALVIN, and SimplerEnv.</p>
+            <div class="entry-links"><a href="https://github.com/InternRobotics/InternManip" target="_blank" rel="noopener">GitHub ↗</a><a href="https://internrobotics.shlab.org.cn/challenge/2025/" target="_blank" rel="noopener">IROS Challenge ↗</a></div>
+          </div>
         </article>
-        <article class="project">
-          <div class="project-head"><h3>NeuralMetric</h3><span class="project-type">Autonomous Driving</span></div>
-          <p>A Transformer-based safety metric that learns context-dependent collision risk from trajectories, reaching state-of-the-art accuracy with 2 ms GPU inference and a 100–1000× speedup over prior methods.</p>
-        </article>
-        <article class="project">
-          <div class="project-head"><h3>Large Reward Models for Robotic Manipulation</h3><span class="project-type">Reward Modeling</span></div>
-          <p>A trajectory-level reward and value model trained from 100K+ human-teleoperation episodes, enabling failure detection, data quality control, and improved VLA optimization.</p>
-        </article>
-        <article class="project">
-          <div class="project-head"><h3>Real-World Online RL for Humanoid Robots</h3><span class="project-type">Reinforcement Learning</span></div>
-          <p>An asynchronous real-world RL pipeline with safe exploration, experience replay, policy updates, evaluation, recovery, and long-duration training support.</p>
+        <article class="entry">
+          <span class="entry-year">2025</span>
+          <div>
+            <h3>Large Reward Models for Robotic Manipulation</h3>
+            <p class="entry-description">A trajectory-level reward and value model trained from 100K+ human-teleoperation episodes, enabling failure detection, data quality control, and improved VLA optimization.</p>
+          </div>
         </article>
       </div>
     </section>
